@@ -5,6 +5,7 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import lombok.*;
+import org.hibernate.envers.Audited;
 
 @Entity
 @AllArgsConstructor
@@ -13,6 +14,7 @@ import lombok.*;
 @Getter
 @ToString
 @Builder
+@Audited
 
 public class Autor {
     @Id

@@ -2,6 +2,7 @@ package com.example.inicial1.entities;
 
 import jakarta.persistence.*;
 import lombok.*;
+import org.hibernate.envers.Audited;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -13,6 +14,7 @@ import java.util.Set;
 @Getter
 @ToString
 @Builder
+@Audited
 
 public class Localidad {
     @Id
@@ -20,7 +22,5 @@ public class Localidad {
     private Long id;
     private String denominacion;
 
-    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
-    @JoinColumn (name = "fk_domicilio")
-    private Set<Domicilio> domicilio = new HashSet<>();
+
 }

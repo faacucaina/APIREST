@@ -2,6 +2,7 @@ package com.example.inicial1.entities;
 
 import jakarta.persistence.*;
 import lombok.*;
+import org.hibernate.envers.Audited;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -13,6 +14,7 @@ import java.util.Set;
 @Getter
 @ToString
 @Builder
+@Audited
 
 public class Libros {
 
@@ -25,6 +27,7 @@ public class Libros {
     private int paginas;
     private String autor;
 
+    @Builder.Default
     @ManyToMany(cascade = CascadeType.ALL)
     @JoinTable(
             name = "libro_autor",

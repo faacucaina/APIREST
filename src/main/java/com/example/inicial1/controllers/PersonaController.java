@@ -7,9 +7,9 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-@CrossOrigin(origins = "*")
+
 @RestController
-@RequestMapping(path = "api/v1/personas")
+@RequestMapping(path = "/personas")
 
 public class PersonaController {
 

@@ -8,9 +8,9 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-@CrossOrigin(origins = "*")
+
 @RestController
-@RequestMapping(path = "api/v1/localidades")
+@RequestMapping(path = "/localidades")
 
 public class LocalidadController {
 
